@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        overflow-x: hidden;
+        font-family: 'Orbitron', sans-serif;
+        background: black;
+        @apply tracking-wider text-gray-200
+    }
+
+  
+}
+
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: rgb(6, 6, 6)
+    
+}
+
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.c-player {
+    display: block;
+    background-color: transparent;
+    display: block;
+    margin: 0px auto;
+    padding: 5px;
+   
+    box-shadow: inset -6px -6px 12px rgba(104, 9, 9, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    max-width: 100%;
+   height: auto;
+    z-index: 1;
+
+}
+
+.c-player > h4 {
+    color: rgb(248, 30, 30);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.c-player > p {
+    color: rgb(0, 160, 240);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.c-player > p span {
+    font-weight: 400;
+}
+
+.c-player--details .details-img {
+    position: relative;
+   z-index: -1;
+    margin: 0 auto;
+  
+}
+
+.c-player--details .details-img img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+   
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 100%;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+
+
+.c-player--details .details-title {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.c-player--details .details-artist {
+    color: rgb(13, 154, 255);
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    
+
+}
+
+.c-player--controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.c-player--controls .play-btn {
+    display: flex;
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+    border: none;
+    outline: none;
+    background-color: #010509;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.c-player--controls .skip-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+
+.audio-waveform{
+    text-align: center;
+    position: relative;
+    top: 260px;
+  }
+
+
+  .content {
+	position: relative;
+    margin-left: 9rem;
+    flex: 1;
+    cursor: pointer
+}
+
+.content:hover {
+    animation-play-state: paused;
+   
+
+}
+
+.content h2 {
+	color: #fff;
+	font-size: 3em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #45c8fc;
+}
+
+.content h2:nth-child(2) {
+	color: #45c8fc;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+.nav-background {
+    background-image: url("./assets/cheetah.jpeg");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
+.nav-background6 {
+    background-image: url("./assets/blackprint.jpeg");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+.nav-background2 {
+    background-image: url("./assets/whitecheetahface.jpeg");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
+.nav-background3 {
+    background-image: url("./assets/desert.webp");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
+.nav-background4 {
+    background-image: url("./assets/whitecheetahprint.webp");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
+.nav-background5 {
+    background-image: url("./assets/orange2.png");
+    background-size: cover;
+
+    /* Workaround for some mobile browsers */
+    min-height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(90, 89, 89);
+    border-radius: 10px;
+  }
