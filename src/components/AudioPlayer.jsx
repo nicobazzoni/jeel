@@ -93,7 +93,7 @@ function AudioPlayer(props) {
     
     <PageSection className='' name="audio">
        
-       <Player className='h-screen '
+       <Player className='h-screen'
      
         currentSongIndex={currentSongIndex} 
         setCurrentSongIndex={setCurrentSongIndex} 

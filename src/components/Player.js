@@ -41,7 +41,7 @@ function Player(props) {
     }
 
     return (
-        <div className=" mt-5 mb-5 nav-background6 ">
+        <div className=" border-none rounded-full mt-3 mb-5 nav-background6 ">
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             
             <Details song={props.songs[props.currentSongIndex]} />

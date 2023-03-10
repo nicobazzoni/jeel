@@ -24,8 +24,8 @@ function App() {
       <Fire  className=''  />
     </div> 
 
-    <div className=" border-none  border-slate-400  w-full h-10 bg-slate-100 p-2">  Music</div>
-    <div className="bg-black border-none">
+    <div className=" border-none   border-slate-400  w-full h-10 bg-slate-100 p-2">  Music</div>
+    <div className="bg-black border rounded-full">
         <AudioPlayer  />
     </div>
             
