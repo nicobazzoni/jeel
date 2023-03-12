@@ -182,5 +182,5 @@ const Water= () => {
 }
 
 
-export default Water;
+export default Water
 

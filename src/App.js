@@ -5,10 +5,15 @@ import Water from "./components/Water";
 import Dalle from "./components/Dalle";
 import Fire from "./components/Fire";
 import About from "./components/About";
-
+import ReactDOM from "react-dom";
 import Tunes from "./components/Tunes";
 import Blob from "./components/Blob";
-import Ocean from "./components/Ocean";
+
+import Eye from "./components/Eye";
+import Eyeball from "./components/Eyeball";
+import { Canvas } from "react-three-fiber";
+import { Suspense } from "react";
+import * as THREE from "three";
 
 function App() { 
   
@@ -25,28 +30,40 @@ function App() {
     </div> 
 
     <div className=" border-none   border-slate-400  w-full h-10 bg-slate-100 p-2">  Music</div>
-    <div className="bg-black border rounded-full">
+    <div className="nav-background6 rounded-full">
         <AudioPlayer  />
     </div>
+    <div className=" border-none  border-slate-400  w-full h-10 bg-slate-100 p-2"> Interact</div>
+       <div className='h-screen'>
+
+       <Eye />
+     
+   </div>
+   <div className='h-screen'>
+
+<Eyeball />
+
+</div>
+    <br></br>
             
     
       
     
-      <section className="  bg-black" id="interact"> 
+      <div className="  bg-black" id="interact"> 
                     
         {/* <div className="h-5 text-center"> 
             <h1 className="text-rose-300 text-sm ml-5"> interact <br></br> </h1>
         </div> */}
 
-<div className=" border-none  border-slate-400  w-full h-10 bg-slate-100 p-2"> Interact</div>
+
               
-    <div className="h-96"> 
+    <div className="h-screen"> 
               
           <Water />
           </div>
 
           
-       </section>
+       </div>
            
         
        <div className=" border-none  border-slate-400  w-full h-10 bg-slate-100 p-2"> Dalle AI</div>
@@ -58,10 +75,12 @@ function App() {
           <Tunes />
         
            <Footer />
-        <div className=" border-none text-white   w-full h-10 bg-slate-100 p-2">  <About />  </div>
 
+           <div className=" sticky border-none text-white   w-full h-10 bg-slate-100 p-2">  <About />  </div>
        
     </div>
+    
+    
   );
 }
 
