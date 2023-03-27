@@ -8,18 +8,25 @@ import About from "./components/About";
 import ReactDOM from "react-dom";
 import Tunes from "./components/Tunes";
 import Blob from "./components/Blob";
-
+import Music from "./components/Music";
 import Eye from "./components/Eye";
 import Eyeball from "./components/Eyeball";
+import Cheetah from "./components/Cheetah";
 import { Canvas } from "react-three-fiber";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import * as THREE from "three";
 
 function App() { 
-  
- 
 
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+ return (
     <div className="w-full ">
       <Navbar  />
     
@@ -30,21 +37,30 @@ function App() {
     </div> 
 
     <div className=" border-none   border-slate-400  w-full h-10 bg-slate-100 p-2">  Music</div>
-    <div className="nav-background6 rounded-full">
-        <AudioPlayer  />
-    </div>
+    <Music />
     <div className=" border-none  border-slate-400  w-full h-10 bg-slate-100 p-2"> Interact</div>
-       <div className='h-screen'>
+       <div className=' h-screen'>
 
        <Eye />
      
    </div>
-   <div className='h-screen'>
+   <div className=' h-screen '>
 
 <Eyeball />
 
 </div>
     <br></br>
+
+    <div className="h-screen">
+
+      <Cheetah />
+   
+         
+       
+      
+    </div>
+
+    
             
     
       

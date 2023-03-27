@@ -19,6 +19,10 @@ function Model(props) {
 
 
 function Eye() {
+
+
+
+
  
 return (
   <Canvas dpr={[1,2]} shadows camera={{ fov: 45}} style={{"position": "absolute"}} >
@@ -37,7 +41,7 @@ return (
 )
 
 }
- 
+
 
 
 
